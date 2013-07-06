@@ -4,4 +4,24 @@
 
 <h2>Contacta</h2>
 
+<form action="/contacta" method="post">
+    <fieldset>
+        <label>Nombre</label>
+        {{ form_widget(form.name) }}
+
+        <label>E-mail</label>
+        {{ form_widget(form.email) }}
+
+        <label>Teléfono</label>
+        {{ form_widget(form.phone) }}
+
+        <label>Haz aquí tu consulta</label>
+        {{ form_widget(form.message) }}
+
+        {{ form_rest(form) }}
+
+        <button type="submit" name="submit" class="btn">Submit</button>
+    </fieldset>
+</form>
+
 {% endblock %}

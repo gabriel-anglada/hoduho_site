@@ -22,6 +22,36 @@ class MainController extends AbstractController
     }
 
     public function contactUsAction() {
-        return $this->container['twig']->render('contact.html.twig', array('active_page' => 'contact'));
+        $form = $this->container['form.factory']->createBuilder('form')
+            ->add('name')
+            ->add('email')
+            ->add('phone')
+            ->add('message')
+            ->getForm();
+
+        if ('POST' == $this->container['request']->getMethod()) {
+            $form->bind($this->container['request']);
+
+            $data = $form->getData();
+
+            if ($form->isValid()) {
+                $data = $form->getData();
+
+                // do something with the data
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('[Hoduho] '.$data['name'].' ha hecho una consulta')
+                    ->setFrom(array($data['email']))
+                    ->setTo(array('gabriel.anglada@gmail.com'))
+                    ->setBody($data['message']);
+
+                $this->container['mailer']->send($message);
+
+                // redirect somewhere
+                return $this->container['twig']->render('contact/contact_success.html.twig', array('active_page' => 'contact'));
+            }
+        }
+
+        // display the form
+        return $this->container['twig']->render('contact.html.twig', array('active_page' => 'contact', 'form' => $form->createView()));
     }
 }

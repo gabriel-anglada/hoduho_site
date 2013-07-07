@@ -4,4 +4,21 @@
 
 <h2>Trabaja con nosotros</h2>
 
+<form action="/trabaja" method="post">
+    <fieldset>
+        <label>E-mail</label>
+        {{ form_widget(form.email) }}
+
+        <label>Teléfono</label>
+        {{ form_widget(form.phone) }}
+
+        <label>Haz aquí tu consulta</label>
+        {{ form_widget(form.message) }}
+
+        {{ form_rest(form) }}
+
+        <button type="submit" name="submit" class="btn">Submit</button>
+    </fieldset>
+</form>
+
 {% endblock %}

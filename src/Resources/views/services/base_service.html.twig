@@ -1,0 +1,37 @@
+{% extends "base/layout.html.twig" %}
+
+{% block content %}
+
+<ul class="nav">
+    <li {% if active_section == 'promolanzamiento' %} class="active"{% endif%}><a href="/servicios/promolanzamiento">Servicio promocional</a></li>
+    <li {% if active_section == 'semanal' %} class="active"{% endif%}><a href="/servicios/semanal">Limpieza semanal</a></li>
+    <li {% if active_section == 'quincenal' %} class="active"{% endif%}><a href="/servicios/quincenal">Limpieza quincenal</a></li>
+    <li {% if active_section == 'puntual' %} class="active"{% endif%}><a href="/servicios/puntual">Limpieza puntual</a></li>
+    <li {% if active_section == 'choque' %} class="active"{% endif%}><a href="/servicios/choque">Limpieza de choque</a></li>
+</ul>
+
+{% block service_title %}
+
+{% endblock %}
+
+<form action="/servicios/{{active_section}}" method="post">
+    <fieldset>
+        <label>E-mail</label>
+        {{ form_widget(form.email) }}
+
+        <label>Teléfono</label>
+        {{ form_widget(form.phone) }}
+
+        {% block service_fields %}
+
+        {% endblock %}
+
+        {{ form_rest(form) }}
+
+        <button type="submit" name="submit" class="btn">Submit</button>
+    </fieldset>
+</form>
+
+
+
+{% endblock %}

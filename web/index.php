@@ -5,9 +5,13 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use Controller\MainController;
 use Controller\ServicesController;
 use Silex\Provider\FormServiceProvider;
+use Services\EmailService;
 
 $app = new Silex\Application();
+
+//Config
 $app['debug'] = true;
+$app['infoMail'] = 'gabriel.anglada@hoduho.es';
 
 //Register services
 $app->register(new FormServiceProvider());
@@ -38,6 +42,9 @@ $app['swiftmailer.options'] = array(
     'encryption' => null,
     'auth_mode' => null
 );
+$app['mailer.custom'] = $app->share(function() use ($app) {
+    return new EmailService($app);
+});
 
 
 //Routing
@@ -47,7 +54,6 @@ $app->get('/', function() use ($app) {
 $app->get('/presentacion', "mainController:homeAction");
 $app->get('/servicios/{type}', "servicesController:servicesAction")
     ->value('type', null);
-$app->get('/servicios/promos/{type}', "servicesController:promoServicesAction");
 $app->get('/puntos', "mainController:pointsAction");
 $app->get('/trabaja', "mainController:workWithUsAction");
 $app->match('/contacta', "mainController:contactUsAction");

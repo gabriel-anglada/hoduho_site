@@ -15,24 +15,24 @@ class ServicesController extends AbstractController
      *
      * Permanent services
      */
-    public function servicesAction($type) {
+    public function servicesAction($type, $duration) {
         if(!$type) {
             return $this->container['twig']->render('services.html.twig', array('active_page' => 'servicios'));
         } else {
-            return $this->serviceByType($type);
+            return $this->serviceByType($type, $duration);
         }
     }
 
-    private function serviceByType($type) {
+    private function serviceByType($type, $duration) {
         switch($type) {
             case 'semanal':
-                return $this->weeklyService();
+                return $this->weeklyService($duration);
             case 'quincenal':
-                return $this->biweeklyService();
+                return $this->biweeklyService($duration);
             case 'puntual':
-                return $this->punctualService();
+                return $this->punctualService($duration);
             case 'choque':
-                return $this->shockService();
+                return $this->shockService($duration);
             case 'promolanzamiento':
                 return $this->launchPromoService();
             default:
@@ -40,10 +40,11 @@ class ServicesController extends AbstractController
         }
     }
 
-    private function weeklyService() {
+    private function weeklyService($duration) {
         $form = $this->container['form.factory']->createBuilder('form')
             ->add('email', 'email')
             ->add('phone', 'text', array('required' => false))
+            ->add('duration', 'integer', array('data' => 1))
             ->getForm();
 
         return $this->container['twig']->render('services/weekly_service.html.twig',
@@ -51,7 +52,7 @@ class ServicesController extends AbstractController
         );
     }
 
-    private function biweeklyService() {
+    private function biweeklyService($duration) {
         $form = $this->container['form.factory']->createBuilder('form')
             ->add('email', 'email')
             ->add('phone', 'text', array('required' => false))
@@ -62,7 +63,7 @@ class ServicesController extends AbstractController
         );
     }
 
-    private function punctualService() {
+    private function punctualService($duration) {
         $form = $this->container['form.factory']->createBuilder('form')
             ->add('email', 'email')
             ->add('phone', 'text', array('required' => false))
@@ -73,7 +74,7 @@ class ServicesController extends AbstractController
         );
     }
 
-    private function shockService() {
+    private function shockService($duration) {
         $form = $this->container['form.factory']->createBuilder('form')
             ->add('email', 'email')
             ->add('phone', 'text', array('required' => false))

@@ -52,8 +52,9 @@ $app->get('/', function() use ($app) {
     return $app->redirect('/presentacion');
 });
 $app->get('/presentacion', "mainController:homeAction");
-$app->get('/servicios/{type}', "servicesController:servicesAction")
-    ->value('type', null);
+$app->get('/servicios/{type}/{duration}', "servicesController:servicesAction")
+    ->value('type', null)
+    ->value('duration', 4);
 $app->get('/puntos', "mainController:pointsAction");
 $app->get('/trabaja', "mainController:workWithUsAction");
 $app->match('/contacta', "mainController:contactUsAction");

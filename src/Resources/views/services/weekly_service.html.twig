@@ -5,5 +5,8 @@
 {% endblock %}
 
 {% block service_fields %}
-    <span>campos para el servicio semanal</span>
+
+    <label>Duración</label>
+    {{ form_widget(form.duration) }}
+
 {% endblock %}

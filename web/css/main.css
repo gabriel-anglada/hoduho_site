@@ -5,15 +5,28 @@ html, body, ul {
 ul {
     list-style-type: none;
 }
-
 hr {
-    margin: 10px;
     border: 0;
     height: 1px;
+    margin-left: 0;
+    margin-right: 0;
+}
+hr.center {
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-image: -webkit-linear-gradient(left, rgba(80,80,80,0), rgba(80,80,80,0.75), rgba(80,80,80,0));
     background-image:    -moz-linear-gradient(left, rgba(80,80,80,0), rgba(80,80,80,0.75), rgba(80,80,80,0));
     background-image:     -ms-linear-gradient(left, rgba(80,80,80,0), rgba(80,80,80,0.75), rgba(80,80,80,0));
     background-image:      -o-linear-gradient(left, rgba(80,80,80,0), rgba(80,80,80,0.75), rgba(80,80,80,0));
+}
+
+hr.left {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-image: -webkit-linear-gradient(left, rgba(80,80,80,0.75), rgba(80,80,80,0));
+    background-image:    -moz-linear-gradient(left, rgba(80,80,80,0.75), rgba(80,80,80,0));
+    background-image:     -ms-linear-gradient(left, rgba(80,80,80,0.75), rgba(80,80,80,0));
+    background-image:      -o-linear-gradient(left, rgba(80,80,80,0.75), rgba(80,80,80,0));
 }
 
 /* SITEMAP */
@@ -31,18 +44,20 @@ hr {
     left: 0;
     bottom: 0;
     min-width: 1080px;
-    padding-bottom: 50px;
+    padding-bottom: 35px;
 }
-.sitemap-links-container {
+.sitemap-links-container,
+.sitemap-social-container {
     margin-right: auto;
     margin-left: auto;
     width: 940px;
 }
 .sitemap-links-container h3 {
+    margin: 2px;
     color: #eeeeee;
     font-style: normal;
     font-weight: 100;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
     text-transform: uppercase;
 }
@@ -51,13 +66,38 @@ hr {
     font-size: 14px;
     line-height: 24px;
 }
+.sitemap-links-list-item.facebook,
+.sitemap-links-list-item.twitter,
+.sitemap-links-list-item.blog{
+    padding-left: 38px;
+    height: 44px;
+    background: url('img/sprite-social.png') no-repeat;
+    line-height: 34px;
+    position: relative;
+}
+.sitemap-links-list-item.facebook {
+    background-position: 0 0;
+}
+.sitemap-links-list-item.twitter {
+    background-position: 0 -44px;
+}
+.sitemap-links-list-item.blog {
+    background-position: 0 -308px;
+}
+
 .sitemap-links-list-item a:link, .sitemap-links-list-item a:visited {
-    color: #666666;
+    color: #777777;
     line-height: 22px;
 }
 .sitemap-links-list-item a:hover {
     color: #60BEE2;
     text-decoration: none;
+}
+.sitemap-social-container {
+    text-align: center;
+}
+.twitter-follow-button {
+    margin-left: 20px;
 }
 
 /* Footer */

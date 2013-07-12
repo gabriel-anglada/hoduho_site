@@ -4,6 +4,7 @@
 
         <div class="span3">
             <h3>Conoce hoduho</h3>
+            <hr class="left">
             <ul class="sitemap-links-list">
                 <li class="sitemap-links-list-item">
                     <a href="/presentacion">Presentación</a>
@@ -16,6 +17,7 @@
 
         <div class="span3">
             <h3>Servicios</h3>
+            <hr class="left">
             <ul class="sitemap-links-list">
                 <li class="sitemap-links-list-item">
                     <a href="/servicios/semanal">Limpieza semanal</a>
@@ -30,13 +32,14 @@
                     <a href="/servicios/choque">Limpieza de choque</a>
                 </li>
                 <li class="sitemap-links-list-item">
-                    <a href="/servicios/promolanzamiento">Promoción de lanzamiento</a>
+                    <b><a href="/servicios/promolanzamiento">Promoción de lanzamiento</a></b>
                 </li>
             </ul>
         </div>
 
         <div class="span3">
             <h3>Contacta con nosotros</h3>
+            <hr class="left">
             <ul class="sitemap-links-list">
                 <li class="sitemap-links-list-item">
                     <a href="/trabaja">Trabaja</a>
@@ -49,25 +52,52 @@
 
         <div class="span3">
             <h3>Comparte</h3>
+            <hr class="left">
             <ul class="sitemap-links-list">
                 <li class="sitemap-links-list-item facebook">
-                    <a href="/trabaja">Facebook</a>
+                    <a href="https://www.facebook.com/hoduho.es" target="_blank">Facebook</a>
                 </li>
                 <li class="sitemap-links-list-item twitter">
-                    <a href="/contacta">Twitter</a>
+                    <a href="https://www.facebook.com/hoduho.es" target="_blank">Twitter</a>
+                </li>
+                <li class="sitemap-links-list-item blog">
+                    <a href="https://www.facebook.com/hoduho.es" target="_blank">Blog</a>
                 </li>
             </ul>
         </div>
 
     </div>
 
-    <hr>
+    <hr class="center">
 
     <div class="sitemap-social-container row-fluid">
         <div class="span12">
             <div class="likes">
+                <div class="fb-like"
+                     data-href="https://www.facebook.com/hoduho.es"
+                     data-send="false"
+                     data-layout="button_count"
+                     data-width="450"
+                     data-show-faces="false"></div>
+                <a href="https://twitter.com/hoduho"
+                   class="twitter-follow-button"
+                   data-show-count="false"
+                   data-lang="es">Seguir a @hoduho</a>
             </div>
         </div>
     </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=334298463370783";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    </script>
     
 </div>

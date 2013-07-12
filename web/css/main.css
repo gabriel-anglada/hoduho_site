@@ -29,6 +29,16 @@ hr.left {
     background-image:      -o-linear-gradient(left, rgba(80,80,80,0.75), rgba(80,80,80,0));
 }
 
+/* HEADER */
+.logo {
+	width: 200px;
+	height: 80px;
+	background: url('img/logo_header.jpg') no-repeat;
+}
+.header-container {
+
+}
+
 /* SITEMAP */
 .sitemap-container {
     -moz-box-shadow: 0px 0px 20px #333333; /* Firefox */

@@ -1,8 +1,75 @@
+html, body, ul {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+}
+
+hr {
+    margin: 10px;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(80,80,80,0), rgba(80,80,80,0.75), rgba(80,80,80,0));
+    background-image:    -moz-linear-gradient(left, rgba(80,80,80,0), rgba(80,80,80,0.75), rgba(80,80,80,0));
+    background-image:     -ms-linear-gradient(left, rgba(80,80,80,0), rgba(80,80,80,0.75), rgba(80,80,80,0));
+    background-image:      -o-linear-gradient(left, rgba(80,80,80,0), rgba(80,80,80,0.75), rgba(80,80,80,0));
+}
+
+/* SITEMAP */
+.sitemap-container {
+    -moz-box-shadow: 0px 0px 20px #333333; /* Firefox */
+    -webkit-box-shadow: 0px 0px 20px #333333; /* Safari, Chrome */
+    box-shadow: 0px 0px 20px #333333; /* CSS3 */
+    width: 100%;
+    padding: 20px 0 0;
+    background: #444444;
+    border-top: 5px solid #60BEE2;
+    font-style: normal;
+    line-height: 24px;
+    display: block;
+    left: 0;
+    bottom: 0;
+    min-width: 1080px;
+    padding-bottom: 50px;
+}
+.sitemap-links-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 940px;
+}
+.sitemap-links-container h3 {
+    color: #eeeeee;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+.sitemap-links-list-item {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+.sitemap-links-list-item a:link, .sitemap-links-list-item a:visited {
+    color: #666666;
+    line-height: 22px;
+}
+.sitemap-links-list-item a:hover {
+    color: #60BEE2;
+    text-decoration: none;
+}
+
+/* Footer */
 footer {
+    -moz-box-shadow: 0px 0px 20px #333333; /* Firefox */
+    -webkit-box-shadow: 0px 0px 20px #333333; /* Safari, Chrome */
+    box-shadow: 0px 0px 20px #333333; /* CSS3 */
+    border-top: 1px solid #666666;
     position:fixed;
     left:0px;
     bottom:0px;
     height:30px;
     width:100%;
-    background:#999;
+    background: #333333;
 }

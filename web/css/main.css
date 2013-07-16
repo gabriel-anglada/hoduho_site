@@ -75,6 +75,38 @@ hr.left {
     color: #60BEE2;
 }
 
+/* HOME */
+.image-container {
+    position: relative;
+}
+.image-wrapper {
+    height: 200px;
+    background: url('img/imagen_fondo.png') no-repeat;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+}
+.shadow-top {
+    position: absolute;
+    background-image: url(img/shadow-top.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 42px;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+.shadow-bottom {
+    position: absolute;
+    background-image: url(img/shadow-bottom.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 32px;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
 
 /* SITEMAP */
 .sitemap-container {

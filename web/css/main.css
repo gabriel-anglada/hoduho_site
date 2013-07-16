@@ -30,14 +30,51 @@ hr.left {
 }
 
 /* HEADER */
-.logo {
-	width: 200px;
-	height: 80px;
-	background: url('img/logo_header.jpg') no-repeat;
+#header {
+    padding: 0 10px 0px;
 }
-.header-container {
+.row {
+    margin: 0 auto;
+    max-width: 940px;
+}
+#header .logo {
+    float: left;
+    overflow: hidden;
+    margin: 0;
+}
+#header .logo a {
+    display: block;
+}
+#nav {
+    float:right;
+}
+#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#nav ul li {
+    float: left;
+    margin: 0 0 0 49px;
+    position: relative;
+}
+#nav ul li a {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    border-top: 3px solid #fff;
+    color: #333333;
+}
 
+#nav ul li a:hover {
+    text-decoration: none;
+    color: #60BEE2;
 }
+#nav ul .active a {
+    border-color: #60BEE2;
+    color: #60BEE2;
+}
+
 
 /* SITEMAP */
 .sitemap-container {

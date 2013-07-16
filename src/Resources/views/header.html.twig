@@ -1,12 +1,30 @@
-<header class="header-container">
-	<div class="logo"><a class="brand" href="/" ></a></div>
-    <ul class="nav nav-pills header-menu">
-        
-        
-        <li {% if active_page == 'presentacion' %} class="active"{% endif%}><a href="/">Presentación</a></li>
-        <li {% if active_page == 'servicios' %} class="active"{% endif%}><a href="/servicios">Servicios</a></li>
-        <li {% if active_page == 'puntos' %} class="active"{% endif%}><a href="/puntos">Puntos hoduho</a></li>
-        <li {% if active_page == 'trabaja' %} class="active"{% endif%}><a href="/trabaja">Tabaja con nostros</a></li>
-        <li {% if active_page == 'contacta' %} class="active"{% endif%}><a href="/contacta">Contacta</a></li>
-    </ul>
+<header id="header">
+    <div class="row">
+        <h1 class="logo">
+            <a href="http://www.hoduho.es">
+                <img src="css/img/logo_header.jpg" alt="Hoduho - servicios de limpieza">
+            </a>
+        </h1>
+        <nav id="nav" class="nav-holder">
+            <div class="menu">
+                <ul>
+                    <li class="{% if active_page == 'presentacion' %} active {% endif%}">
+                        <a href="/presentacion">Presentación</a>
+                    </li>
+                    <li class="{% if active_page == 'servicios' %} active {% endif%}">
+                        <a href="/servicios">Servicios</a>
+                    </li>
+                    <li class="{% if active_page == 'puntos' %} active {% endif%}">
+                        <a href="/puntos">Puntos hoduho</a>
+                    </li>
+                    <li class="{% if active_page == 'trabaja' %} active {% endif%}">
+                        <a href="/trabaja">Trabaja con nosotros</a>
+                    </li>
+                    <li class="{% if active_page == 'contacta' %} active {% endif%}">
+                        <a href="/contacta">Contacta</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
 </header>

@@ -15,16 +15,21 @@
         <link rel="canonical" href="http://www.hoduho.es/" />
 
         <link rel="shortcut icon" href="{{ 'favicon.ico' }}" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
 
         <link href="/lib/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
         <link href="/css/main.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-    {% include 'utils/blur.html.twig' %}
+    <!--{% include 'utils/blur.html.twig' %}-->
     {% block body %}
     {% endblock %}
     {% include 'utils/google_analytics.html.twig' %}
-    <script src="/lib/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/lib/jquery/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="/lib/jquery/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
     </body>
 </html>

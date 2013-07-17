@@ -40,7 +40,7 @@ hr.left {
 #header .logo {
     float: left;
     overflow: hidden;
-    margin: 0;
+    margin: 12px 0;
 }
 #header .logo a {
     display: block;
@@ -60,8 +60,8 @@ hr.left {
 }
 #nav ul li a {
     display: block;
-    height: 80px;
-    line-height: 80px;
+    height: 100px;
+    line-height: 100px;
     border-top: 3px solid #fff;
     color: #333333;
 }
@@ -82,9 +82,10 @@ hr.left {
 .image-wrapper {
     height: 200px;
     background: url('img/imagen_fondo.png') no-repeat;
+    background-position: center center;
     margin-right: auto;
     margin-left: auto;
-    width: 1200px;
+    width: 100%;
 }
 .shadow-top {
     position: absolute;
@@ -125,13 +126,12 @@ hr.left {
     min-width: 1000px;
     padding-bottom: 35px;
 }
-.sitemap-links-container,
-.sitemap-social-container {
+.centered-container {
     margin-right: auto;
     margin-left: auto;
     width: 940px;
 }
-.sitemap-links-container h3 {
+.sitemap-links-h3 {
     margin: 2px;
     color: #eeeeee;
     font-style: normal;

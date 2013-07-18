@@ -1,14 +1,13 @@
 $(document).ready(function() {
 	$("#carousel").carouFredSel({
 		items				: 1,
-		direction			: "left",
-		scroll : {
+        scroll : {
 			items			: 1,
-			easing			: "elastic",
-			duration		: 1000,							
+			duration		: 2000,
+            fx              : "crossfade",
 			pauseOnHover	: true,
 			auto			: true,
 			width			: 300
-		}					
-	});	
+        }
+	});
 });

@@ -16,7 +16,7 @@ hr {
     margin-right: 0;
 }
 p {
-	text-indent:30px;
+	text-indent:10px;
 	text-align:justify;
 	text-justify:inter-word;
 }
@@ -123,7 +123,7 @@ hr.left {
     z-index: 1;
 }
 #carousel {
-    color: #666666;
+    color: #999999;
 }
 #carousel p{
     margin-bottom: 3px;
@@ -142,8 +142,8 @@ hr.left {
     box-shadow: 0px 0px 20px #333333; /* CSS3 */
     width: 100%;
     padding: 20px 0 0;
-    background: #444444;
-    border-top: 5px solid #60BEE2;
+    background: #666666;
+    border-top: 1px solid #60BEE2;
     font-style: normal;
     line-height: 24px;
     display: block;
@@ -191,12 +191,15 @@ hr.left {
 }
 
 .sitemap-links-list-item a:link, .sitemap-links-list-item a:visited {
-    color: #777777;
+    color: #aaaaaa;
     line-height: 22px;
 }
 .sitemap-links-list-item a:hover {
     color: #60BEE2;
     text-decoration: none;
+}
+.likes {
+    text-align: center;
 }
 .sitemap-social-container {
     text-align: center;
@@ -210,11 +213,30 @@ footer {
     -moz-box-shadow: 0px 0px 20px #333333; /* Firefox */
     -webkit-box-shadow: 0px 0px 20px #333333; /* Safari, Chrome */
     box-shadow: 0px 0px 20px #333333; /* CSS3 */
-    border-top: 1px solid #666666;
-    position:fixed;
+    border-top: 1px solid #60BEE2;
     left:0px;
     bottom:0px;
     height:30px;
     width:100%;
     background: #333333;
+}
+footer span {
+    color: #777777;
+    margin-top: 4px;
+}
+footer span.right {
+    float: right;
+    margin-right: 10px;
+}
+footer span.left {
+    float: left;
+    margin-left: 10px;
+}
+footer a:link, footer a:visited {
+    color: #aaaaaa;
+    line-height: 22px;
+}
+footer a:hover {
+    color: #60BEE2;
+    text-decoration: none;
 }

@@ -184,7 +184,7 @@ hr.left {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 420px) {
     .home-left-text-container {
         width: 100% !important;
         padding-left: 20px;

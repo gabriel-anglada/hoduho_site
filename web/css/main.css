@@ -91,7 +91,18 @@ hr.left {
     border-color: #60BEE2;
     color: #60BEE2;
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 950px) {
+    #nav ul {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 40px;
+        width: 500px;
+        text-align: center;
+    }
+    #nav ul li {
+        margin-left: 15px;
+    }
     #header .logo {
         text-align: center;
         float: none;
@@ -100,24 +111,27 @@ hr.left {
         float: none;
         width: 100%;
     }
-    #nav ul {
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 40px;
-        width: 290px;
-        text-align: center;
+    #nav ul li a {
+        height: 100px;
+        line-height: 100px;
     }
-    #nav ul li {
-        margin-left: 15px;
-    }
+}
+@media screen and (max-width: 850px) {
     #nav ul li a {
         height: 50px;
         line-height: 50px;
+    }
+}
+@media screen and (max-width: 550px) {
+    #nav ul {
+        width: 290px !important;
     }
     .work-tab {
         margin-left: 45px !important;
     }
 }
+
+
 
 /* HOME */
 .image-container {
@@ -163,13 +177,7 @@ hr.left {
 	float: left;
 }
 
-@media screen and (max-width: 500px) {
-    .image-container {
-        margin-top: 30px;
-    }
-    .image-wrapper {
-        height: 150px;
-    }
+@media screen and (max-width: 850px) {
     #carousel {
         display: none;
     }
@@ -182,6 +190,16 @@ hr.left {
         padding-right: 70px;
         margin-left: 0 !important;
     }
+}
+@media screen and (max-width: 550px) {
+    .image-container {
+        margin-top: 30px;
+    }
+    .image-wrapper {
+        height: 150px;
+    }
+
+
 }
 
 @media screen and (max-width: 420px) {
@@ -268,7 +286,20 @@ hr.left {
     margin-left: 20px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 950px) {
+    .sitemap-container {
+        min-width: 0;
+    }
+    .sitemap-linkgroups-container, .likes-container, .home-text-container {
+        width: 100%;
+    }
+    .sitemap-links-container {
+        padding-left: 20px;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
     .sitemap-container {
         display: none;
     }
@@ -307,7 +338,7 @@ footer a:hover {
     text-decoration: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     footer span.left {
         display: none;
     }

@@ -5,7 +5,7 @@ html, body, ul {
 body {
 	font:15px/25px 'Source Sans Pro', sans-serif;
 	background:#fff;
-    min-width: 400px;
+    min-width: 300px;
 }	
 ul {
     list-style-type: none;
@@ -183,6 +183,16 @@ hr.left {
         margin-left: 0 !important;
     }
 }
+
+@media screen and (max-width: 300px) {
+    .home-left-text-container {
+        width: 100% !important;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0 !important;
+    }
+}
+
 
 
 /* SITEMAP */

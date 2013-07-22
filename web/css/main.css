@@ -178,7 +178,7 @@ hr.left {
 }
 
 @media screen and (max-width: 850px) {
-    #carousel {
+    .carousel-container {
         display: none;
     }
     .home-text-container {

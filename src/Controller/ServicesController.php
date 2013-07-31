@@ -6,6 +6,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
+use Entity\BaseService;
+
 class ServicesController extends AbstractController
 {
 
@@ -41,10 +43,14 @@ class ServicesController extends AbstractController
     }
 
     private function weeklyService($duration) {
-        $form = $this->container['form.factory']->createBuilder('form')
+
+        $service = new BaseService();
+        $service->setDuration($duration);
+
+        $form = $this->container['form.factory']->createBuilder('form', $service)
             ->add('email', 'email')
             ->add('phone', 'text', array('required' => false))
-            ->add('duration', 'integer', array('data' => 1))
+            ->add('duration', 'integer')
             ->getForm();
 
         return $this->container['twig']->render('services/weekly_service.html.twig',

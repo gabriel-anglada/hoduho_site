@@ -19,7 +19,7 @@ class ServicesController extends AbstractController
      */
     public function servicesAction($type, $duration) {
         if(!$type) {
-            return $this->container['twig']->render('services.html.twig', array('active_page' => 'servicios'));
+            return $this->container['twig']->render('services.html.twig', array('active_page' => 'servicios', 'active_section' => 'none'));
         } else {
             return $this->serviceByType($type, $duration);
         }
@@ -38,7 +38,7 @@ class ServicesController extends AbstractController
             case 'promolanzamiento':
                 return $this->launchPromoService();
             default:
-                return $this->container['twig']->render('services.html.twig', array('active_page' => 'servicios'));
+                return $this->container['twig']->render('services.html.twig', array('active_page' => 'servicios', 'active_section' => 'none'));
         }
     }
 

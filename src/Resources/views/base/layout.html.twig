@@ -4,6 +4,15 @@
 
 {% include 'header.html.twig' %}
 
+<div class="sub-header-container">
+    <div class="sub-header-shadow-top"></div>
+
+    {% block sub_header %}
+    {% endblock %}
+
+    <div class="sub-header-shadow-bottom"></div>
+</div>
+
 {% block content %}
 {% endblock %}
 

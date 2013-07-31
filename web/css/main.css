@@ -131,22 +131,13 @@ hr.left {
     }
 }
 
-
-
-/* HOME */
-.image-container {
+.sub-header-container {
     position: relative;
+    margin-bottom: 30px;
 }
-.image-wrapper {
-    height: 300px;
-    background: url('img/casa.png') no-repeat;
-    background-position: center center;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-}
-.shadow-top {
+.sub-header-shadow-top {
     position: absolute;
+    pointer-events: none;
     background-image: url(img/shadow-top.png);
     background-repeat: no-repeat;
     background-position: top center;
@@ -155,8 +146,9 @@ hr.left {
     top: 0;
     z-index: 1;
 }
-.shadow-bottom {
+.sub-header-shadow-bottom {
     position: absolute;
+    pointer-events: none;
     background-image: url(img/shadow-bottom.png);
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -165,6 +157,18 @@ hr.left {
     bottom: 0;
     z-index: 1;
 }
+
+
+/* HOME */
+.image-wrapper {
+    height: 300px;
+    background: url('img/casa.png') no-repeat;
+    background-position: center center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
 #carousel {
     color: #999999;
 }
@@ -212,12 +216,25 @@ hr.left {
 }
 
 
+/* SERVICES */
+.services-nav-container {
+     width: 100%;
+    height: 50px;
+    background-color: #eeeeee;
+}
+.services-nav {
+    width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+}
+
 
 /* SITEMAP */
 .sitemap-container {
-    -moz-box-shadow: 0px 0px 20px #333333; /* Firefox */
-    -webkit-box-shadow: 0px 0px 20px #333333; /* Safari, Chrome */
-    box-shadow: 0px 0px 20px #333333; /* CSS3 */
+    -moz-box-shadow: 0px 0px 5px #333333; /* Firefox */
+    -webkit-box-shadow: 0px 0px 5px #333333; /* Safari, Chrome */
+    box-shadow: 0px 0px 5px #333333; /* CSS3 */
     width: 100%;
     padding: 20px 0 0;
     background: #666666;
@@ -307,9 +324,9 @@ hr.left {
 
 /* Footer */
 footer {
-    -moz-box-shadow: 0px 0px 20px #333333; /* Firefox */
-    -webkit-box-shadow: 0px 0px 20px #333333; /* Safari, Chrome */
-    box-shadow: 0px 0px 20px #333333; /* CSS3 */
+    -moz-box-shadow: 0px 0px 5px #333333; /* Firefox */
+    -webkit-box-shadow: 0px 0px 5px #333333; /* Safari, Chrome */
+    box-shadow: 0px 0px 5px #333333; /* CSS3 */
     border-top: 1px solid #60BEE2;
     left:0px;
     bottom:0px;

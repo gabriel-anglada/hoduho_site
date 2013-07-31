@@ -1,16 +1,20 @@
 {% extends "base/layout.html.twig" %}
 
+{% block sub_header %}
+
+<div class="services-nav-container">
+    <ul class="nav nav-pills services-nav">
+        <li {% if active_section == 'promolanzamiento' %} class="active"{% endif%}><a href="/servicios/promolanzamiento">Servicio promocional</a></li>
+        <li {% if active_section == 'semanal' %} class="active"{% endif%}><a href="/servicios/semanal">Limpieza semanal</a></li>
+        <li {% if active_section == 'quincenal' %} class="active"{% endif%}><a href="/servicios/quincenal">Limpieza quincenal</a></li>
+        <li {% if active_section == 'puntual' %} class="active"{% endif%}><a href="/servicios/puntual">Limpieza puntual</a></li>
+        <li {% if active_section == 'choque' %} class="active"{% endif%}><a href="/servicios/choque">Limpieza de choque</a></li>
+    </ul>
+</div>
+
+{% endblock %}
+
 {% block content %}
-
-<h2>Servicios</h2>
-
-<ul class="nav nav-pills">
-    <li {% if active_section == 'promolanzamiento' %} class="active"{% endif%}><a href="/servicios/promolanzamiento">Servicio promocional</a></li>
-    <li {% if active_section == 'semanal' %} class="active"{% endif%}><a href="/servicios/semanal">Limpieza semanal</a></li>
-    <li {% if active_section == 'quincenal' %} class="active"{% endif%}><a href="/servicios/quincenal">Limpieza quincenal</a></li>
-    <li {% if active_section == 'puntual' %} class="active"{% endif%}><a href="/servicios/puntual">Limpieza puntual</a></li>
-    <li {% if active_section == 'choque' %} class="active"{% endif%}><a href="/servicios/choque">Limpieza de choque</a></li>
-</ul>
 
 {% block service_details %}
 

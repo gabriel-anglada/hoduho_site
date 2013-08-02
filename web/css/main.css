@@ -39,6 +39,27 @@ hr.left {
     background-image:     -ms-linear-gradient(left, rgba(80,80,80,0.75), rgba(80,80,80,0));
     background-image:      -o-linear-gradient(left, rgba(80,80,80,0.75), rgba(80,80,80,0));
 }
+a {color: #60BEE2;}
+a:hover {color: #60BEE2;}
+
+.text-container {
+    padding: 30px 0 30px 0;
+}
+
+.nav a {
+    color: #60BEE2;
+}
+.nav a:hover {
+    color: #999999;
+}
+
+.nav .active a {
+    color: #cccccc;
+    background-color: #666666;
+}
+.nav .active a:hover {
+    background-color: #60BEE2;
+}
 
 /* COLORS */
 .blue{color:#60BEE2;}
@@ -97,7 +118,7 @@ hr.left {
         margin-right: auto;
         margin-left: auto;
         margin-top: 40px;
-        width: 505px;
+        width: 510px;
         text-align: center;
     }
     #nav ul li {
@@ -133,7 +154,6 @@ hr.left {
 
 .sub-header-container {
     position: relative;
-    margin-bottom: 30px;
 }
 .sub-header-shadow-top {
     position: absolute;
@@ -223,10 +243,46 @@ hr.left {
     background-color: #eeeeee;
 }
 .services-nav {
-    width: 730px;
+    width: 760px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 8px;
+}
+.services-row-container {
+    padding-bottom: 20px;
+}
+.prices-container {
+    border: 1px solid #60BEE2;
+    width: 100%;
+}
+.price-container {
+    text-align: center;
+    float: left;
+    width: 33%;
+    box-sizing: border-box;
+}
+.price-container >p{
+    text-align: center;
+    margin-bottom: 0;
+}
+.price-container >a{
+    cursor: pointer;
+    font-size: 25px;
+}
+.prices-footer-container {
+    float: left;
+    width: 100%;
+    text-align: center;
+    background-color: #EBD375;
+}
+.points-discover-container {
+    margin-top: 20px;
+    border: 1px solid #60BEE2;
+}
+.points-discover-container h4 {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 
@@ -307,7 +363,7 @@ hr.left {
     .sitemap-container {
         min-width: 0;
     }
-    .sitemap-linkgroups-container, .likes-container, .home-text-container {
+    .sitemap-linkgroups-container, .likes-container {
         width: 100%;
     }
     .sitemap-links-container {

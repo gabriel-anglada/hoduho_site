@@ -275,6 +275,9 @@ a:hover {color: #60BEE2;}
     text-align: center;
     background-color: #EBD375;
 }
+.more-info-container {
+    display: none;
+}
 .points-discover-container {
     margin-top: 20px;
     border: 1px solid #60BEE2;
@@ -283,6 +286,62 @@ a:hover {color: #60BEE2;}
     text-align: center;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+@media screen and (max-width: 950px) {
+    .services-text-container {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .services-nav-container {
+        height: 85px;
+    }
+    .services-nav {
+        width: 450px;
+    }
+    .punctual-nav-pill {
+        margin-left: 75px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .prices-container {
+        display: none;
+    }
+    .more-info-container {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .services-row-container>div {
+        width: 100% !important;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0 !important;
+    }
+
+    .points-discover-container h4 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .services-nav-container {
+        height: 190px;
+    }
+    .services-nav {
+        width: 170px;
+    }
+    .services-nav li a {
+        width: 140px;
+        text-align: center;
+    }
+    .punctual-nav-pill {
+        margin-left: 0px;
+    }
 }
 
 

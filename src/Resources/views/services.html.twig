@@ -7,7 +7,7 @@
         <li {% if active_section == 'promolanzamiento' %} class="active"{% endif%}><a href="/servicios/promolanzamiento">Servicio promocional</a></li>
         <li {% if active_section == 'semanal' %} class="active"{% endif%}><a href="/servicios/semanal">Limpieza semanal</a></li>
         <li {% if active_section == 'quincenal' %} class="active"{% endif%}><a href="/servicios/quincenal">Limpieza quincenal</a></li>
-        <li {% if active_section == 'puntual' %} class="active"{% endif%}><a href="/servicios/puntual">Limpieza puntual</a></li>
+        <li class="punctual-nav-pill {% if active_section == 'puntual' %}active{% endif%}"><a href="/servicios/puntual">Limpieza puntual</a></li>
         <li {% if active_section == 'choque' %} class="active"{% endif%}><a href="/servicios/choque">Limpieza de choque</a></li>
     </ul>
 </div>
@@ -18,8 +18,8 @@
 
 {% block service_details %}
 
-<div class="text-container">
-    <div class="centered-container row-fluid services-row-container">
+<div class="centered-container services-text-container text-container">
+    <div class="row-fluid services-row-container">
 
         <div class="offset1 span4">
             <h3>Limpieza semanal</h3>
@@ -42,6 +42,7 @@
                     +1 €/h y te traemos los productos
                 </div>
             </div>
+            <h2 class="more-info-container"><a href="/servicios/semanal/4">+ info</a></h2>
         </div>
 
         <div class="offset2 span4">
@@ -64,11 +65,12 @@
                     +1 €/h y te traemos los productos
                 </div>
             </div>
+            <h2 class="more-info-container"><a href="/servicios/puntual/4">+ info</a></h2>
         </div>
 
     </div>
 
-    <div class="centered-container row-fluid services-row-container">
+    <div class="row-fluid services-row-container">
 
         <div class="offset1 span4">
             <h3>Limpieza quincenal</h3>
@@ -90,6 +92,7 @@
                     +1 €/h y te traemos los productos
                 </div>
             </div>
+            <h2 class="more-info-container"><a href="/servicios/quincenal/4">+ info</a></h2>
         </div>
 
         <div class="offset2 span4">
@@ -112,11 +115,12 @@
                     Productos incluidos
                 </div>
             </div>
+            <h2 class="more-info-container"><a href="/servicios/choqu/5">+ info</a></h2>
         </div>
 
     </div>
 
-    <div class="centered-container row-fluid services-row-container">
+    <div class="row-fluid services-row-container">
         <div class="offset2 span8 points-discover-container">
             <h4>Descubre como beneficiarte de horas de servcio gratuito mediante nuestro sistema de <a href="/puntos">puntos</a></h4>
         </div>
